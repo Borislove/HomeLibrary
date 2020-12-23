@@ -23,6 +23,9 @@ public class Main {
         System.out.println("Отчество");
         av.middle_name = new Scanner(System.in).nextLine();
 
+        System.out.println("Название книги");
+        hl.tittle_book = new Scanner(System.in).nextLine();
+
         System.out.println("Жанр: ");
         hl.genre = new Scanner(System.in).nextLine();
 
@@ -55,6 +58,8 @@ public class Main {
             fw.write("Имя: " + av.first_name + "\n");
             fw.write("Фамилия: " + av.last_name + "\n");
             fw.write("Отчество: " + av.middle_name + "\n");
+
+            fw.write("Название книги: "+hl.tittle_book+"\n");
 
             fw.write("Жанр: " + hl.genre + "\n");
             fw.write("Количество страниц: " + hl.number_of_pages + "\n");

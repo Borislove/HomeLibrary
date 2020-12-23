@@ -14,6 +14,8 @@ public class Home_Library {
 
      String crust; //корка?, переплёт
 
+    String tittle_book; //название книги
+
 /*    public Home_Library(String last_name, String first_name, String middle_name, String genre, int number_of_pages, int yop, String ph) {
         this.last_name = last_name;
         this.first_name = first_name;
