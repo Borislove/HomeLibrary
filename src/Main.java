@@ -31,12 +31,12 @@ public class Main {
 
 
         //запись в файл
-        FileWriter fw = new FileWriter("test", true);
+        FileWriter fw = new FileWriter("src\\out\\test.txt", true); //фальш на перезапись
 
         try {
             fw.write("------------------" + "\n");
             fw.write("Имя: " + av.first_name + "\n");
-            fw.write("Фмилия: " + av.last_name + "\n");
+            fw.write("Фамилия: " + av.last_name + "\n");
             fw.write("Отчество: " + av.middle_name + "\n");
             fw.write("------------------" + "\n");
         } finally {
