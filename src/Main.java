@@ -5,6 +5,7 @@ import java.util.Scanner;
 //при воде ф.и.о не должно быть символов
 //1 буква ф, должна быть большой
 //и.о , инициалы, если одна бука то ставить точку
+//запись сразу после проверки? а не когда все введено
 public class Main {
 
     //public static String sc = new Scanner(System.in).nextLine();
@@ -16,8 +17,19 @@ public class Main {
         Author av = new Author();
         Home_Library hl = new Home_Library();
 
+        ////////////////////////////////////////////////////////////////
         System.out.println("Имя");
         av.first_name = new Scanner(System.in).nextLine();
+        // av.first_name.toCharArray();
+        for (Character value : av.first_name.toCharArray()) {
+            if (Character.isDigit(value)) {
+                System.err.println("Имя не может содержать цифру!");
+                System.exit(0);
+                break;
+            }
+        }
+        ////////////////////////////////////////////////////////////////
+
         System.out.println("Фамилия");
         av.last_name = new Scanner(System.in).nextLine();
         System.out.println("Отчество");
@@ -59,14 +71,14 @@ public class Main {
             fw.write("Фамилия: " + av.last_name + "\n");
             fw.write("Отчество: " + av.middle_name + "\n");
 
-            fw.write("Название книги: "+hl.tittle_book+"\n");
+            fw.write("Название книги: " + hl.tittle_book + "\n");
 
             fw.write("Жанр: " + hl.genre + "\n");
             fw.write("Количество страниц: " + hl.number_of_pages + "\n");
             fw.write("Год издания: " + hl.year_of_publication + "\n");
             fw.write("Издательство: " + hl.publiching_house + "\n");
 
-            fw.write("Обложка/Переплёт: "+hl.crust+"\n");
+            fw.write("Обложка/Переплёт: " + hl.crust + "\n");
 
             fw.write("------------------" + "\n");
         } finally {
