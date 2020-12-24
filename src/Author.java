@@ -1,7 +1,7 @@
 class Author {
-    String last_name; //фамилия
+    static String last_name; //фамилия
     static String first_name = ""; //имя
-    String middle_name; //отчество?
+    static String middle_name; //отчество?
 
-    int id; //номер
+    static int id = 0; //номер
 }
