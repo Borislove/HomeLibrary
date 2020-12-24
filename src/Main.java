@@ -1,5 +1,6 @@
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 //при воде ф.и.о не должно быть символов
@@ -7,6 +8,9 @@ import java.util.Scanner;
 //и.о , инициалы, если одна бука то ставить точку
 //запись сразу после проверки? а не когда все введено
 public class Main {
+
+    static int count = 0;
+    private static String str = "";
 
     //public static String sc = new Scanner(System.in).nextLine();
 
@@ -19,15 +23,36 @@ public class Main {
 
         ////////////////////////////////////////////////////////////////
         System.out.println("Имя");
-        av.first_name = new Scanner(System.in).nextLine();
+        Author.first_name = new Scanner(System.in).nextLine();
+
         // av.first_name.toCharArray();
-        for (Character value : av.first_name.toCharArray()) {
-            if (Character.isDigit(value)) {
-                System.err.println("Имя не может содержать цифру!");
+        for (Character value : Author.first_name.toCharArray()) {
+            if (Character.isDigit(value)) {  //цифра или
+                System.err.println("Имя не может содержать цифру");
                 System.exit(0);
                 break;
             }
         }
+        ////////////////////////////////////////////////////////////////
+
+        // TODO: 24.12.2020 ???
+        char[] arr = Author.first_name.toCharArray();
+        for (int i = 0; i < arr.length; i++) {
+            str += arr[i];
+            if (count == 0) {
+                arr[0] = Character.toUpperCase(arr[i]);
+            }
+            count++;
+            arr[i] = Character.toLowerCase(arr[i]);
+            arr[0] = Character.toUpperCase(arr[0]);
+        }
+        System.out.println("str = " + str);
+        System.out.println(Arrays.toString(arr));
+
+        // System.out.println(Arrays.toString(arr));
+        //опустить все символы в нижний регистр
+        //   System.out.println(Author.first_name);
+        //System.out.println(av.first_name.indexOf(0));
         ////////////////////////////////////////////////////////////////
 
         System.out.println("Фамилия");
