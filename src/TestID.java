@@ -24,12 +24,13 @@ public class TestID {
         Integer num = Integer.parseInt(count);
         System.out.println("num: " + num);
         num++;
-        System.out.println("Добавили нового автора");
+        System.out.println("Добавили нового автора " + num);
         System.out.println("num: " + num);
 
         FileWriter fw = new FileWriter("src\\out\\test1.txt", false);
         //fw.write(scanner.nextLine());
         fw.write("count id: " + num);
+
 
         reader.close();
         fw.close();

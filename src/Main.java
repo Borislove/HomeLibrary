@@ -29,7 +29,7 @@ public class Main {
             reader.close();
         }*/
 
-        // System.out.println(scanner.hasNext());
+        // System.out.println(scanner.hasNext());*
 
         /*while (scanner.hasNextLine()) {
             System.out.println(scanner.nextLine());
@@ -40,6 +40,7 @@ public class Main {
 //        System.out.println("Id: " + Author.id);
 
 
+        //чтение имени с клавиатуры, и проверка на корректность (пока только цифры)
         ////////////////////////////////////////////////////////////////
         System.out.println("Имя");
         Author.first_name = new
@@ -54,6 +55,8 @@ public class Main {
                 break;
             }
         }
+
+        //поднятие первой буквы в верхний регистр, остальные все в нижнем
         ////////////////////////////////////////////////////////////////
 
         // TODO: 24.12.2020 ???
