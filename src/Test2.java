@@ -11,6 +11,12 @@ public class Test2 {
         this.middle_name = middle_name;
     }
 
+
+    /*Test2(String last_name){
+        this.last_name = last_name;
+    }*/
+
+
     public static void main(String[] args) {
         Test2 t = new Test2("Vasilev", "Serg", "Sergeevich");
         /*t.last_name = "last_name";

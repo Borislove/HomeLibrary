@@ -4,7 +4,6 @@ public class Test3 extends Test2 {
         super(last_name, first_name, middle_name);
     }
 
-
     public static void main(String[] args) {
         Test3 t = new Test3("Test", "testovich", "testing");
         System.out.println(t);
