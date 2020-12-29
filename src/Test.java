@@ -18,6 +18,9 @@ public class Test {
 
     static String delimiter = " | ";
 
+    //static String column1Format = "%-3.3s";
+    static String column1Format = "%-8.10s";
+
     public static void main(String[] args) {
 
         /*System.out.print("Фамилия"+delimiter);
@@ -40,6 +43,17 @@ public class Test {
         System.out.print(year_of_publication);
         System.out.print(publiching_house);
         System.out.print(crust);
+
+        System.out.print("\n");
+
+        System.out.format(column1Format, last_name);
+        System.out.format(column1Format, genre);
+        System.out.format(column1Format, tittle_book);
+        System.out.format(column1Format, number_of_pages);
+        System.out.format(column1Format, year_of_publication);
+        System.out.format(column1Format, publiching_house);
+        System.out.format(column1Format, crust);
+
     }
 }
 
