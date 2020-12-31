@@ -1,38 +1,66 @@
 import javax.swing.*;
+import java.awt.*;
 
 
 public class Frame extends JFrame {
 
-    static JFrame f = new JFrame();
-    static JButton jButton;
-    static JPanel jPanel;
+    JTextField field1;
+    JTextArea jTextArea;
 
-    static JPanel jPanel123;
+    public Frame(String str) {
+        super(str);
+        Container c = getContentPane();
+        c.setLayout(new FlowLayout());
 
-    static JTextArea jTextArea;
+        field1 = new JTextField(30);
+
+       /* JLabel label2 = new JLabel("Автор:");  //метка
+        c.add(label2);*/
+
+        setLayout(new FlowLayout());
+
+        add(new JLabel("id:"));
+        add(new JTextArea("       "));
+
+
+        add(new JLabel("Автор:"));
+        add(new JTextArea("       "));
+
+        /*jTextArea = new JTextArea();
+        c.add(jTextArea);*/
+
+        add(new JLabel("Жанр:"));
+        add(new JTextArea("         "));
+
+
+        add(new JLabel("Название книги:"));
+        add(new JTextArea("         "));
+
+        add(new JLabel("кол-во стр:"));
+        add(new JTextArea("         "));
+
+        add(new JLabel("Год издания:"));
+        add(new JTextArea("         "));
+
+        add(new JLabel("Издательство:"));
+        add(new JTextArea("         "));
+
+        add(new JLabel("Переплёт:"));
+        add(new JTextArea("         "));
+
+        add(new JButton("добавить"));
+
+
+        setSize(800, 700);
+       // setResizable(false);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        setAlwaysOnTop(true);
+        setVisible(true);
+    }
 
     public static void main(String[] args) {
-        f.setSize(800, 700);
-        f.setResizable(false);
-        f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        f.setLocationRelativeTo(null);
-        f.setAlwaysOnTop(true);
 
-        jButton = new JButton("добавить");
-        jPanel = new JPanel();
-        jPanel.add(jButton);
-        f.add(jPanel);
-
-
-        f.setVisible(true);
-
-        jTextArea = new JTextArea("HELLO");
-        jTextArea.setEditable(false);
-
-        jPanel123 = new JPanel();
-        jPanel123.add(jTextArea);
-        f.add(jTextArea);
-
-
+        Frame f = new Frame("test");
     }
 }
